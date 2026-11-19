@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohamed Bennaji — Data Analyst</title>
+<meta name="description" content="Data Analyst portfolio — Python, SQL, Power BI. Former RF optimization engineer (2G–5G). Bilingual English/French, Nova Scotia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F1B2A; --navy-2: #18283B; --ink: #12202E; --body: #344354; --muted: #4A5868;
+    --bg: #F6F7F9; --line: #E1E6EC; --chip: #EEF1F5; --cyan: #5FD0D9; --link: #0B6E78;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+  h1, h2, h3, .brand, .stat-num { font-family: "Space Grotesk", sans-serif; }
+  a { color: var(--link); }
+  a:hover { color: #084F57; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+
+  /* Header */
+  header { background: var(--navy); color: #fff; }
+  .nav { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; padding: 20px 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 18px; }
+  .nav nav { display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px; }
+  .nav nav a { color: #DCE6F0; text-decoration: none; }
+  .nav nav a:hover { color: #fff; }
+  .hero { display: flex; flex-wrap: wrap; gap: 48px; align-items: center; padding: 72px 32px 96px; }
+  .hero-text { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+  .eyebrow { margin: 0; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--cyan); font-weight: 600; }
+  .hero h1 { margin: 0; font-size: clamp(36px, 5vw, 52px); line-height: 1.08; }
+  .lead { margin: 0; font-size: 19px; line-height: 1.6; color: #C3D0DD; max-width: 620px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+  .btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 8px; font-weight: 600; text-decoration: none; }
+  .btn-primary { background: var(--cyan); color: var(--navy); }
+  .btn-primary:hover { background: #84DDE4; color: var(--navy); }
+  .btn-ghost { border: 1px solid #4A5B6E; color: #fff; }
+  .btn-ghost:hover { border-color: #8FA3B8; color: #fff; }
+  .stats { flex: 1 1 300px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .stat { background: var(--navy-2); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .stat-num { font-size: 32px; font-weight: 700; }
+  .stat-label { font-size: 14px; color: #AFC0D1; }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  h2 { margin: 0; font-size: 34px; }
+  .section-head { display: flex; flex-direction: column; gap: 8px; margin-bottom: 32px; }
+  .section-head p { margin: 0; font-size: 18px; color: var(--muted); }
+  .about { display: flex; flex-wrap: wrap; gap: 48px; padding-top: 88px; }
+  .about > div:first-child { flex: 1 1 300px; }
+  .about-text { flex: 999 1 560px; min-width: 0; font-size: 18px; line-height: 1.7; color: var(--body); }
+  .about-text p { margin: 0 0 16px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+  .card-img { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; }
+  .card-img img { width: 100%; height: 100%; object-fit: cover; }
+  .card-body { padding: 24px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .card h3 { margin: 0; font-size: 22px; font-weight: 600; }
+  .card p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--muted); }
+  .card p strong { color: var(--ink); }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--chip); color: var(--body); }
+  .card-link { margin-top: auto; font-weight: 600; text-decoration: none; }
+  .status { margin-top: auto; font-size: 14px; font-weight: 600; color: #8A5A12; }
+
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .skill { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+  .skill h3 { margin: 0 0 10px; font-family: Inter, sans-serif; font-size: 17px; font-weight: 600; }
+  .skill p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--muted); }
+
+  .job { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 32px; display: flex; flex-wrap: wrap; gap: 32px; }
+  .job-meta { flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; }
+  .job-title { font-family: "Space Grotesk", sans-serif; font-size: 20px; font-weight: 600; }
+  .job-meta span { color: var(--muted); }
+  .job ul { flex: 999 1 480px; min-width: 0; margin: 0; padding-left: 20px; font-size: 17px; line-height: 1.6; color: var(--body); }
+  .job li { margin-bottom: 10px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .badge { font-size: 15px; padding: 8px 14px; border-radius: 8px; background: var(--chip); color: var(--body); }
+
+  footer { background: var(--navy); color: #fff; margin-top: 56px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: center; padding: 72px 32px; }
+  .contact > div:first-child { flex: 999 1 460px; }
+  .contact p { margin: 12px 0 0; font-size: 18px; line-height: 1.6; color: #C3D0DD; }
+  .contact-links { flex: 1 1 260px; display: flex; flex-direction: column; gap: 12px; font-size: 17px; }
+  .contact-links a { color: var(--cyan); text-decoration: none; }
+  .contact-links a:hover { text-decoration: underline; color: var(--cyan); }
+</style>
+</head>
+<body>
+
+<!--
+  TO EDIT BEFORE PUBLISHING (search for "[" and "Mohamed-Bennaji"):
+  - Mohamed-Bennaji  -> your GitHub username (appears in project links)
+  - Bennaji, [X], [City], [YYYY], [email], links
+  - Put your CV in the same folder, named cv.pdf
+  - Put screenshots in an "images" folder and replace the placeholder <div>s with <img>
+-->
+
+<header>
+  <div class="wrap nav" style="padding-left:32px;padding-right:32px;">
+    <div class="brand">
+      <svg width="28" height="22" viewBox="0 0 28 22" aria-hidden="true"><rect x="0" y="15" width="5" height="7" rx="1" fill="#5FD0D9"/><rect x="7.5" y="10" width="5" height="12" rx="1" fill="#5FD0D9"/><rect x="15" y="5" width="5" height="17" rx="1" fill="#5FD0D9"/><rect x="22.5" y="0" width="5" height="22" rx="1" fill="#5FD0D9"/></svg>
+      Mohamed Bennaji
+    </div>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <div class="wrap hero">
+    <div class="hero-text">
+      <p class="eyebrow">Data Analyst · Telecom &amp; Network Analytics</p>
+      <h1>10 years turning network data into decisions.</h1>
+      <p class="lead">I'm a former RF optimization engineer (2G–5G) moving into data analytics. I use Python, SQL and Power BI to find what's behind the numbers and explain it clearly, in English or French.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projects">See my projects</a>
+        <a class="btn btn-ghost" href="cv.pdf" download>Download CV</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="stat-num">10 yrs</span><span class="stat-label">network performance analysis</span></div>
+      <div class="stat"><span class="stat-num">2G–5G</span><span class="stat-label">four network generations</span></div>
+      <div class="stat"><span class="stat-num">[X]</span><span class="stat-label">sites monitored daily</span></div>
+      <div class="stat"><span class="stat-num">EN · FR</span><span class="stat-label">fully bilingual</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="wrap about">
+    <div><h2>About me</h2></div>
+    <div class="about-text">
+      <p>For a decade at inwi, my job was to keep a mobile network healthy. That meant reading thousands of performance counters every day, spotting what went wrong, proving why, and measuring whether a fix actually worked.</p>
+      <p>That is data analysis. Now I'm bringing the same habits (clean data, clear KPIs, root causes over guesses) to organizations in Nova Scotia that need their data to make sense to the people using it.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="wrap">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <p>Each project shows the question, the method and the result.</p>
+    </div>
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-img" style="background:#E7F2F3;color:#4A6A70;">[Screenshot: forecast vs actual traffic]</div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Regression</span></div>
+          <h3>Network Traffic Forecasting</h3>
+          <p><strong>Question:</strong> how much traffic will each site carry in [X weeks], so capacity is added before congestion?</p>
+          <p><strong>Result:</strong> a linear regression model reaching [R² / MAPE], used to plan upgrades ahead of demand.</p>
+          <a class="card-link" href="https://github.com/Mohamed-Bennaji/network-traffic-forecasting">View on GitHub →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img" style="background:#EEEAF6;color:#5B4F73;">[Screenshot: Power BI dashboard]</div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Data storytelling</span></div>
+          <h3>Service Operations Dashboard</h3>
+          <p><strong>Question:</strong> how can a service organization see its key activity numbers at a glance?</p>
+          <p><strong>Result:</strong> a 4-page Power BI report with KPI cards, bar charts and detail tables, in the organization's brand, presented live to a hiring panel.</p>
+          <a class="card-link" href="https://github.com/Mohamed-Bennaji/service-operations-dashboard">View report →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img" style="background:#F6EFE4;color:#6E5A3A;">[Screenshot: KPI analysis report]</div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Power BI</span></div>
+          <h3>Network KPI Analysis</h3>
+          <p><strong>Question:</strong> which cells degrade most, when, and what drives it?</p>
+          <p><strong>Result:</strong> [one-line finding, once the project is complete]</p>
+          <span class="status">In progress</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="skills" class="wrap">
+    <div class="section-head"><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill"><h3>Analysis</h3><p>Python (pandas), SQL, Excel</p></div>
+      <div class="skill"><h3>Visualization</h3><p>Power BI, DAX, dashboard design</p></div>
+      <div class="skill"><h3>Statistics</h3><p>Regression, forecasting, trend and anomaly analysis</p></div>
+      <div class="skill"><h3>Domain</h3><p>Telecom KPIs, root-cause analysis, before/after impact</p></div>
+    </div>
+  </section>
+
+  <section id="experience" class="wrap">
+    <div class="section-head"><h2>Experience</h2></div>
+    <div class="job">
+      <div class="job-meta">
+        <span class="job-title">RF Optimization Engineer</span>
+        <span>inwi · [City], Morocco</span>
+        <span>[YYYY] – [YYYY]</span>
+      </div>
+      <ul>
+        <li>Analyzed daily KPIs for [X] sites across 2G, 3G, 4G and 5G.</li>
+        <li>Traced degradations to root causes, improving [KPI] by [X%].</li>
+        <li>Measured the impact of optimization changes with before/after analysis.</li>
+        <li>Automated recurring reports in Python, saving [X hours] a week.</li>
+      </ul>
+    </div>
+    <div class="badges">
+      <span class="badge">Master's, Telecommunications &amp; Networks</span>
+      <span class="badge">[Certification, e.g. PL-300]</span>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2>Let's talk.</h2>
+      <p>Open to Data Analyst roles in Nova Scotia, on site or remote. Je réponds aussi en français.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:[email]">[email]</a>
+      <a href="https://www.linkedin.com/in/[profile]">LinkedIn</a>
+      <a href="https://github.com/Mohamed-Bennaji">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
