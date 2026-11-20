@@ -93,9 +93,8 @@
 <body>
 
 <!--
-  TO EDIT BEFORE PUBLISHING (search for "[" and "Mohamed-Bennaji"):
+  NOTES:
   - Mohamed-Bennaji  -> your GitHub username (appears in project links)
-  - Bennaji, [X], [City], [YYYY], [email], links
   - Put your CV in the same folder, named cv.pdf
   - Put screenshots in an "images" folder and replace the placeholder <div>s with <img>
 -->
@@ -127,7 +126,7 @@
     <div class="stats">
       <div class="stat"><span class="stat-num">10 yrs</span><span class="stat-label">network performance analysis</span></div>
       <div class="stat"><span class="stat-num">2G–5G</span><span class="stat-label">four network generations</span></div>
-      <div class="stat"><span class="stat-num">[X]</span><span class="stat-label">sites monitored daily</span></div>
+      <div class="stat"><span class="stat-num">Python · SQL</span><span class="stat-label">analysis toolkit</span></div>
       <div class="stat"><span class="stat-num">EN · FR</span><span class="stat-label">fully bilingual</span></div>
     </div>
   </div>
@@ -137,7 +136,7 @@
   <section class="wrap about">
     <div><h2>About me</h2></div>
     <div class="about-text">
-      <p>For a decade at inwi, my job was to keep a mobile network healthy. That meant reading thousands of performance counters every day, spotting what went wrong, proving why, and measuring whether a fix actually worked.</p>
+      <p>For ten years, with Huawei, Sofrecom (Orange) and inwi, my job was to keep mobile networks healthy. That meant reading thousands of performance counters every day, spotting what went wrong, proving why, and measuring whether a fix actually worked.</p>
       <p>That is data analysis. Now I'm bringing the same habits (clean data, clear KPIs, root causes over guesses) to organizations in Nova Scotia that need their data to make sense to the people using it.</p>
     </div>
   </section>
@@ -150,34 +149,34 @@
     <div class="grid">
 
       <article class="card">
-        <div class="card-img" style="background:#E7F2F3;color:#4A6A70;">[Screenshot: forecast vs actual traffic]</div>
+        <div class="card-img"><img src="https://raw.githubusercontent.com/Mohamed-Bennaji/lte-congestion-lost-traffic/main/images/2_before_after_upgrade.png" alt="Chart: actual vs expected traffic before and after a capacity upgrade"></div>
         <div class="card-body">
-          <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Regression</span></div>
-          <h3>Network Traffic Forecasting</h3>
-          <p><strong>Question:</strong> how much traffic will each site carry in [X weeks], so capacity is added before congestion?</p>
-          <p><strong>Result:</strong> a linear regression model reaching [R² / MAPE], used to plan upgrades ahead of demand.</p>
-          <a class="card-link" href="https://github.com/Mohamed-Bennaji/network-traffic-forecasting">View on GitHub →</a>
+          <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Regression</span></div>
+          <h3>LTE Congestion: Lost Traffic &amp; Upgrade Priorities</h3>
+          <p><strong>Question:</strong> which congested cells lose the most traffic, and where should the capacity budget go first?</p>
+          <p><strong>Result:</strong> 655,200 hourly records analyzed, one regression per cell (median R² 0.99), a ranked upgrade shortlist, validated on 10 upgraded cells.</p>
+          <a class="card-link" href="https://github.com/Mohamed-Bennaji/lte-congestion-lost-traffic">View on GitHub →</a>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img" style="background:#EEEAF6;color:#5B4F73;">[Screenshot: Power BI dashboard]</div>
+        <div class="card-img" style="background:#EEEAF6;color:#5B4F73;">Power BI dashboard</div>
         <div class="card-body">
           <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Data storytelling</span></div>
           <h3>Service Operations Dashboard</h3>
           <p><strong>Question:</strong> how can a service organization see its key activity numbers at a glance?</p>
           <p><strong>Result:</strong> a 4-page Power BI report with KPI cards, bar charts and detail tables, in the organization's brand, presented live to a hiring panel.</p>
-          <a class="card-link" href="https://github.com/Mohamed-Bennaji/service-operations-dashboard">View report →</a>
+          <span class="status">Screenshots coming soon</span>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-img" style="background:#F6EFE4;color:#6E5A3A;">[Screenshot: KPI analysis report]</div>
+        <div class="card-img" style="background:#F6EFE4;color:#6E5A3A;">Network automation</div>
         <div class="card-body">
-          <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Power BI</span></div>
-          <h3>Network KPI Analysis</h3>
-          <p><strong>Question:</strong> which cells degrade most, when, and what drives it?</p>
-          <p><strong>Result:</strong> [one-line finding, once the project is complete]</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Geospatial</span><span class="tag">Automation</span></div>
+          <h3>Network Data Automation Toolkit</h3>
+          <p><strong>Question:</strong> how do you audit 80,000 cells without spending days in Excel?</p>
+          <p><strong>Method:</strong> Python scripts for neighbor audits, nearest-site search by azimuth, PCI reuse checks and KML conversion.</p>
           <span class="status">In progress</span>
         </div>
       </article>
@@ -189,7 +188,7 @@
     <div class="section-head"><h2>Skills</h2></div>
     <div class="skills">
       <div class="skill"><h3>Analysis</h3><p>Python (pandas), SQL, Excel</p></div>
-      <div class="skill"><h3>Visualization</h3><p>Power BI, DAX, dashboard design</p></div>
+      <div class="skill"><h3>Visualization</h3><p>Power BI, DAX, Tableau, dashboard design</p></div>
       <div class="skill"><h3>Statistics</h3><p>Regression, forecasting, trend and anomaly analysis</p></div>
       <div class="skill"><h3>Domain</h3><p>Telecom KPIs, root-cause analysis, before/after impact</p></div>
     </div>
@@ -199,20 +198,42 @@
     <div class="section-head"><h2>Experience</h2></div>
     <div class="job">
       <div class="job-meta">
-        <span class="job-title">RF Optimization Engineer</span>
-        <span>inwi · [City], Morocco</span>
-        <span>[YYYY] – [YYYY]</span>
+        <span class="job-title">RAN Expert</span>
+        <span>inwi · Morocco</span>
+        <span>2023 – 2025</span>
       </div>
       <ul>
-        <li>Analyzed daily KPIs for [X] sites across 2G, 3G, 4G and 5G.</li>
-        <li>Traced degradations to root causes, improving [KPI] by [X%].</li>
-        <li>Measured the impact of optimization changes with before/after analysis.</li>
-        <li>Automated recurring reports in Python, saving [X hours] a week.</li>
+        <li>Ran multi-vendor KPI audits to locate degradations and guide changes that reduced drop call rates.</li>
+        <li>Analyzed large signaling log datasets to find root causes of call drops and VoLTE issues.</li>
+        <li>Measured the KPI impact of feature trials (SON, VoLTE, energy saving) before and after deployment.</li>
+      </ul>
+    </div>
+    <div class="job" style="margin-top:20px;">
+      <div class="job-meta">
+        <span class="job-title">RNPO Senior Consultant</span>
+        <span>Sofrecom (Orange MEA) · Morocco</span>
+        <span>2022 – 2023</span>
+      </div>
+      <ul>
+        <li>Presented KPI analysis, performance trends and recommendations to client teams.</li>
+        <li>Analyzed KPI degradations with drive-test data, leading to improved LTE throughput.</li>
+      </ul>
+    </div>
+    <div class="job" style="margin-top:20px;">
+      <div class="job-meta">
+        <span class="job-title">RNPO Engineer</span>
+        <span>Huawei Technologies (inwi projects) · Morocco</span>
+        <span>2015 – 2022</span>
+      </div>
+      <ul>
+        <li>Produced daily, weekly and monthly KPI and capacity reports (throughput, accessibility, retainability, VoLTE quality).</li>
+        <li>Automated KPI reporting with Python and Excel, speeding up data processing and decisions.</li>
       </ul>
     </div>
     <div class="badges">
-      <span class="badge">Master's, Telecommunications &amp; Networks</span>
-      <span class="badge">[Certification, e.g. PL-300]</span>
+      <span class="badge">Engineering Degree, Telecommunication &amp; Network Engineering (EMSI, 2015) · Canadian Master's equivalent (WES)</span>
+      <span class="badge">Bachelor's, Electronics &amp; Industrial Computing (Cadi Ayyad University, 2012)</span>
+      <span class="badge">Certified: Advanced Data Analytics (Python, SQL, Tableau, Excel)</span>
     </div>
   </section>
 </main>
@@ -224,8 +245,8 @@
       <p>Open to Data Analyst roles in Nova Scotia, on site or remote. Je réponds aussi en français.</p>
     </div>
     <div class="contact-links">
-      <a href="mailto:[email]">[email]</a>
-      <a href="https://www.linkedin.com/in/[profile]">LinkedIn</a>
+      <a href="mailto:bennaji.mhmed@gmail.com">bennaji.mhmed@gmail.com</a>
+      <a href="https://www.linkedin.com/in/Mohamed-BENNAJI">LinkedIn</a>
       <a href="https://github.com/Mohamed-Bennaji">GitHub</a>
     </div>
   </div>
